@@ -58,7 +58,7 @@
 - (void)copyHtml:(NSString*)html {
    NSRange     htmlRange = NSMakeRange(0, html.length);
    [self generateHeaderWithHtml:htmlRange fragment:htmlRange andSelection:htmlRange];
-   [buf appendString:html];
+   [buf appendFormat:@"%@\n", html];
    [self appendTrailer];
 }
 
